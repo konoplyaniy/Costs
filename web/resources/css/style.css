@@ -1,0 +1,356 @@
+body {
+    background: #cccccc url("/resources/images/background.jpg");
+}
+
+
+/*menu start*/
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0, 0, 0); /* Black fallback color */
+    background-color: rgba(0, 0, 0, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px
+    }
+
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+.menu-div {
+    background: #00ced169;
+    margin-bottom: 30px;
+}
+
+/*menu end*/
+
+.button {
+    position: relative;
+    background-color: #1ab2d6;
+    border: none;
+    font-size: 28px;
+    color: #FFFFFF;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.button:after {
+    content: "";
+    background: #90EE90;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+.top-image {
+    margin-top: 15em;
+    border: aquamarine solid 1px;
+    display: block;
+    background-color: aliceblue;
+    border-radius: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    height: 400px;
+    opacity: 0.9;
+}
+
+.top-image:hover {
+    background-color: #00aaff;
+    border-color: blue;
+    opacity: 0.8;
+}
+
+.body {
+    font-family: cursive;
+}
+
+.tg {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-color: #ccc;
+}
+
+.tg td {
+    text-align: center;
+    font-family: cursive;
+    font-size: 14px;
+    padding: 10px 5px;
+    overflow: hidden;
+    word-break: normal;
+    color: #333;
+}
+
+.tg th {
+    border-bottom: groove #0dbcff;
+    font-family: cursive;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 10px 5px;
+    overflow: hidden;
+    word-break: normal;
+    color: #333;
+}
+
+.tg .tg-4eph {
+    background-color: #f9f9f9
+}
+
+.input-field-label {
+    font-family: cursive;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 10px 5px;
+    overflow: hidden;
+    word-break: normal;
+    color: #333;
+    background-color: #00ced1;
+}
+
+.submit-button {
+    padding: 10px;
+    margin: 5px;
+    font-size: 14px;
+    font-family: cursive;
+    border: none;
+    background-color: #1ab2d6;
+}
+
+.input-field {
+    border: none;
+    border-bottom: 2px solid greenyellow;
+    background-color: cadetblue;
+    height: 2.5em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.input-field:focus{
+    background-color: lightblue;
+}
+
+.dropdown {
+    border: none;
+    border-bottom: 2px solid greenyellow;
+    height: 2.5em;
+    width: 15em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.shadow-box{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.table {
+    background-color: cadetblue;
+    border: 3em;
+    padding: 2em;
+    margin: auto 15px 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.parent {
+    margin-left: 80px;
+    margin-right: 80px;
+    top: 0;
+    left: 0;
+    overflow: auto;
+}
+
+.block {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+.line {
+    width: 100%;
+    border: none;
+    background-color: #00aaff;
+    color: #00aaff;
+    height: 1px;
+}
+
+.diagram {
+    padding: 3em;
+    float: left;
+}
+
+.table-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: auto;
+    display: table;
+    font-family: cursive;
+}
+
+.my-button {
+    transition: all 250ms cubic-bezier(.02, .01, .47, 1);
+    transition-property: all;
+    transition-duration: 200ms;
+    transition-timing-function: cubic-bezier(0.02, 0.01, 0.47, 1);
+    transition-delay: initial;
+    border-radius: 5px;
+
+}
+
+.submit-button:hover {
+    opacity: 1;
+    background-color: #00aaff82;
+    color: black;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .14)
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.left {
+    float: left;
+    /*margin: 10px;
+    background-color: #00ced169;*/
+}
+
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%
+}
+
+.section{
+    margin: 10px;
+    background-color: #00ced169;
+}
+
+.right {
+    float: right;
+    /*margin: 10px;
+    background-color: #00ced169;*/
+}
+
+.income-price-text {
+    color: green !important;
+    font-size: x-large !important;
+    font-weight: bold !important;
+}
+
+.purchase-price-text {
+    color: red !important;
+    font-size: x-large !important;
+    font-weight: bold !important;
+}
+
+.difference-price-text {
+    color: blue !important;
+    font-size: x-large !important;
+    font-weight: bold !important;
+}
+
+.error-message {
+    background-color: lightcoral;
+    text-align: center;
+    color: black;
+    font-size: 14px;
+}
+
+.success-message {
+    background-color: #00aaff;
+    text-align: center;
+    color: black;
+    font-size: 14px;
+}
+
+.alert {
+    padding: 10px;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
+
